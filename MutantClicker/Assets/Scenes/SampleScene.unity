@@ -565,6 +565,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   button: {fileID: 1189271747}
+  textBox: {fileID: 659909501}
 --- !u!4 &803023923
 Transform:
   m_ObjectHideFlags: 0

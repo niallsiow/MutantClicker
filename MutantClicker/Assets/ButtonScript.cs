@@ -5,8 +5,10 @@ using UnityEngine.UI;
 
 public class ButtonScript : MonoBehaviour
 {
-
     public Button button;
+    public Text textBox;
+
+    private int counter = 0;
 
     // Start is called before the first frame update
     void Start()
@@ -22,6 +24,7 @@ public class ButtonScript : MonoBehaviour
 
     void ButtonClicked(int buttonNo)
     {
-        Debug.Log("button clicked");
+        counter++;
+        textBox.text = counter.ToString();
     }
 }
