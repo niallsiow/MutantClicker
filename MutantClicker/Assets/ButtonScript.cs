@@ -13,7 +13,7 @@ public class ButtonScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        textBox.text = counter.ToString();
+        textBox.text = "Sacrifices: " + counter.ToString();
 
         button.onClick.AddListener(() => ButtonClicked(1));
     }
@@ -27,6 +27,6 @@ public class ButtonScript : MonoBehaviour
     void ButtonClicked(int buttonNo)
     {
         counter++;
-        textBox.text = counter.ToString();
+        textBox.text = "Sacrifices: " + counter.ToString();
     }
 }
