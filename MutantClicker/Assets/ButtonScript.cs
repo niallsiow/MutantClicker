@@ -11,12 +11,19 @@ public class ButtonScript : MonoBehaviour
 
     public Text textBox;
 
-    private int counter = 0;
+    private float counter = 0;
     private int autoClickers = 0;
 
 
     float timeBetweenAutoClicks = 1f;
     float timeSinceAutoClicks = 0f;
+
+
+    float timeBetweenAutoClickUpdates = 0.1f;
+    float timeSinceAutoClickUpdates = 0f;
+
+
+    float test = 12.5f;
 
     // Start is called before the first frame update
     void Start()
@@ -31,13 +38,18 @@ public class ButtonScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        textBox.text = "Sacrifices: " + counter.ToString();
+        textBox.text = "Sacrifices: " + Mathf.RoundToInt(counter).ToString();
 
-        if(Time.time > timeSinceAutoClicks)
+
+        // smoothly updates the value of counter
+        if(Time.time > timeSinceAutoClickUpdates)
         {
-            timeSinceAutoClicks = Time.time + timeBetweenAutoClicks;
-            counter = counter + (1 * autoClickers);
+            timeSinceAutoClickUpdates = Time.time + timeBetweenAutoClickUpdates;
+            counter = counter + (1 * ((float)autoClickers / 10f));
         }
+        
+
+        Debug.Log(counter);
     }
 
     void ButtonClicked(int buttonNo)
@@ -53,4 +65,5 @@ public class ButtonScript : MonoBehaviour
             counter = counter - 10;
         }
     }
+
 }
