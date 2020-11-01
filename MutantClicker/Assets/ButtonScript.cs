@@ -6,13 +6,15 @@ using UnityEngine.UI;
 public class ButtonScript : MonoBehaviour
 {
     public Button clickButton;
-    public Button autoClickerButton;
+    public Button clickerButton;
+    public Button clickyClickerButton;
 
 
     public Text textBox;
 
     private float counter = 0;
-    private int autoClickers = 0;
+    private int clickers = 0;
+    private int clickyClickers;
 
 
     float timeBetweenAutoClicks = 1f;
@@ -32,20 +34,23 @@ public class ButtonScript : MonoBehaviour
 
         clickButton.onClick.AddListener(() => ButtonClicked(1));
 
-        autoClickerButton.onClick.AddListener(() => AutoClickerButtonClicked());
+        clickerButton.onClick.AddListener(() => ClickerButtonClicked());
+
+        clickyClickerButton.onClick.AddListener(() => ClickyClickerButtonClicked());
     }
 
     // Update is called once per frame
     void Update()
     {
-        textBox.text = "Sacrifices: " + Mathf.RoundToInt(counter).ToString();
+        textBox.text = "Clicks: " + Mathf.RoundToInt(counter).ToString();
 
 
         // smoothly updates the value of counter
         if(Time.time > timeSinceAutoClickUpdates)
         {
             timeSinceAutoClickUpdates = Time.time + timeBetweenAutoClickUpdates;
-            counter = counter + (1 * ((float)autoClickers / 10f));
+            counter = counter + (1 * ((float)clickers / 10f));
+            counter = counter + (10 * ((float)clickyClickers / 10f));
         }
         
 
@@ -57,12 +62,21 @@ public class ButtonScript : MonoBehaviour
         counter++;
     }
 
-    void AutoClickerButtonClicked()
+    void ClickerButtonClicked()
     {
         if(counter > 10)
         {
-            autoClickers++;
+            clickers++;
             counter = counter - 10;
+        }
+    }
+
+    void ClickyClickerButtonClicked()
+    {
+        if(counter > 100)
+        {
+            clickyClickers++;
+            counter = counter - 100;
         }
     }
 
