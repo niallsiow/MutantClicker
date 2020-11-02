@@ -27,6 +27,9 @@ public class ButtonScript : MonoBehaviour
 
     float test = 12.5f;
 
+    int clickersCost = 10;
+    int clickyClickersCost = 100;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -64,20 +67,34 @@ public class ButtonScript : MonoBehaviour
 
     void ClickerButtonClicked()
     {
-        if(counter > 10)
+        if(counter >= clickersCost)
         {
             clickers++;
             counter = counter - 10;
+
+            setNewClickerCost(ref clickersCost, 1, clickerButton, 1);
         }
     }
 
     void ClickyClickerButtonClicked()
     {
-        if(counter > 100)
+        if(counter >= clickyClickersCost)
         {
             clickyClickers++;
             counter = counter - 100;
+
+            setNewClickerCost(ref clickyClickersCost, 10, clickyClickerButton, 10);
         }
+    }
+
+    //Pass current clicker cost as a reference, provide modifier to add on and button reference. Set value accordingly and change text.
+    //Currently to change text the rate also has to come through as a parameter. Might try and find a workaround.
+    bool setNewClickerCost(ref int cost, int modifier, Button button, int rate)
+    {
+        cost = cost + modifier;
+
+        button.GetComponentInChildren<Text>().text = "Buy " + button.name + " (Cost = " + cost + " clicks)\n (" + rate + " click/s)";
+        return true;
     }
 
 }
