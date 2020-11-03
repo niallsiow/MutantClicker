@@ -27,6 +27,9 @@ public class ButtonScript : MonoBehaviour
 
     float test = 12.5f;
 
+
+    // potential idea for organising this is to either 1.  attach a generic script to each clicker button to handle this stuff or 2. make an array of stuff to do comparisons or something
+
     int clickersCost = 10;
     int clickyClickersCost = 100;
 
