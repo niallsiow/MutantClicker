@@ -758,6 +758,7 @@ GameObject:
   - component: {fileID: 1102580280}
   - component: {fileID: 1102580279}
   - component: {fileID: 1102580281}
+  - component: {fileID: 1102580282}
   m_Layer: 5
   m_Name: Clicker
   m_TagString: Untagged
@@ -865,6 +866,19 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &1102580282
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1102580277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8a83dbd16862f045a6da2a2687200d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayRate: 1
 --- !u!1 &1129151210
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,6 +957,7 @@ GameObject:
   - component: {fileID: 1187364955}
   - component: {fileID: 1187364954}
   - component: {fileID: 1187364953}
+  - component: {fileID: 1187364956}
   m_Layer: 5
   m_Name: Clickiest Clicker
   m_TagString: Untagged
@@ -1050,6 +1065,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1187364951}
   m_CullTransparentMesh: 0
+--- !u!114 &1187364956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1187364951}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8a83dbd16862f045a6da2a2687200d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayRate: 0
 --- !u!1 &1189271745
 GameObject:
   m_ObjectHideFlags: 0
@@ -1181,6 +1209,7 @@ GameObject:
   - component: {fileID: 1302324404}
   - component: {fileID: 1302324403}
   - component: {fileID: 1302324402}
+  - component: {fileID: 1302324405}
   m_Layer: 5
   m_Name: Clicky Clicker
   m_TagString: Untagged
@@ -1288,6 +1317,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1302324400}
   m_CullTransparentMesh: 0
+--- !u!114 &1302324405
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1302324400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8a83dbd16862f045a6da2a2687200d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayRate: 10
 --- !u!1 &1406866782
 GameObject:
   m_ObjectHideFlags: 0
@@ -1300,6 +1342,7 @@ GameObject:
   - component: {fileID: 1406866786}
   - component: {fileID: 1406866785}
   - component: {fileID: 1406866784}
+  - component: {fileID: 1406866787}
   m_Layer: 5
   m_Name: Clickier Clicker
   m_TagString: Untagged
@@ -1407,6 +1450,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1406866782}
   m_CullTransparentMesh: 0
+--- !u!114 &1406866787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1406866782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8a83dbd16862f045a6da2a2687200d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  displayRate: 0
 --- !u!1 &1491544721
 GameObject:
   m_ObjectHideFlags: 0
