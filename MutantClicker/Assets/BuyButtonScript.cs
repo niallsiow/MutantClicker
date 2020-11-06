@@ -8,11 +8,15 @@ public class BuyButtonScript : MonoBehaviour
     public int displayRate = 0;
 
     private Text buttonText;
+    private Text numberBoughtText;
+
+    private int numberBought = 0;
 
     // Start is called before the first frame update
     void Start()
     {
         buttonText = GetComponentInChildren<Text>();
+        numberBoughtText = GetComponentsInChildren<Text>()[1];
     }
 
     // Update is called once per frame
@@ -25,6 +29,9 @@ public class BuyButtonScript : MonoBehaviour
     public bool setNewClickerCost(ref int cost, int modifier)
     {
         cost = cost + modifier;
+
+        numberBought++;
+        numberBoughtText.text = numberBought.ToString();
 
         buttonText.text = "Buy " + gameObject.name + " (Cost = " + cost + " clicks)\n (" + displayRate + " click/s)";
         return true;
