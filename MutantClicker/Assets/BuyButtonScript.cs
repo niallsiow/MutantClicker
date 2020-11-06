@@ -7,10 +7,12 @@ public class BuyButtonScript : MonoBehaviour
 {
     public int displayRate = 0;
 
+    private Text buttonText;
+
     // Start is called before the first frame update
     void Start()
     {
-        
+        buttonText = GetComponentInChildren<Text>();
     }
 
     // Update is called once per frame
@@ -24,7 +26,7 @@ public class BuyButtonScript : MonoBehaviour
     {
         cost = cost + modifier;
 
-        GetComponentInChildren<Text>().text = "Buy " + gameObject.name + " (Cost = " + cost + " clicks)\n (" + displayRate + " click/s)";
+        buttonText.text = "Buy " + gameObject.name + " (Cost = " + cost + " clicks)\n (" + displayRate + " click/s)";
         return true;
     }
 }
